@@ -13,10 +13,10 @@
 def counting_numbers(num):
     if 0 < num // 100 < 10:
         return 'это трёхзначное число, зеркальное его отображение:'
-    elif 10 > num // 10 > 0 == num // 100:
+    if 10 > num // 10 > 0 == num // 100:
         return 'это двузначное число, произведение его цифр равно'
-    else:
-        return 'это цифра, её квадрат равен'
+
+    return 'это цифра, её квадрат равен'
 
 
 def convert_number(num):
@@ -25,7 +25,7 @@ def convert_number(num):
     elif counting_numbers(num) == 'это двузначное число, произведение его цифр равно':
         res = (num // 10) * (num % 10)
     else:
-        res = (num // 100) + ((num % 100) - (num % 10)) + ((num % 10) * 100)
+        res = num // 100 + num % 100 - num % 10 + num % 10 * 100
     return res
 
 

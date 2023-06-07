@@ -11,7 +11,7 @@ ATTEMPT_NUMBER = 10
 num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 attempt = ATTEMPT_NUMBER
-while attempt > 0:
+while attempt:
     guess_user = int(input('Введите число: '))
     if num == guess_user:
         print('Вы угадали! Поздравляем!')
@@ -21,7 +21,7 @@ while attempt > 0:
     elif num > guess_user:
         print('Загаданное число больше.')
     attempt -= 1
-    if attempt > 0:
-        print('Осталось попыток:', attempt)
-    else:
-        print('Попытки закончились, увы, вы не угадали! Было загадано число', num)
+    print('Осталось попыток:', attempt)
+    
+else:
+    print('Попытки закончились, увы, вы не угадали! Было загадано число', num)

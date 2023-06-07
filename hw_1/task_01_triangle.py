@@ -10,22 +10,22 @@
 def is_triangle(a, b, c):
     if a < b + c and b < a + c and c < a + b:
         return True
-    else:
-        return False
+
+    return False
 
 
 def is_isosceles(a, b, c):
     if a == b or b == c or a == c:
         return True
-    else:
-        return False
+
+    return False
 
 
 def is_equilateral(a, b, c):
-    if a == b and b == c:
+    if a == b == c:
         return True
-    else:
-        return False
+
+    return False
 
 
 a_user = float(input('Введите сторону a: '))
