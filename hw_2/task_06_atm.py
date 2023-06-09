@@ -12,52 +12,52 @@
 """
 
 START_SUM = 0
+MULTIPLE_SUM = 50
+MINIMUM_COMMISSION = 30 #total
+COMMISSION = 0.015 #percent
+MAXIMUM_COMMISSION = 600 #total
+LUXURY_COMMISSION = 0.1 #percent
+LUXURY_SUM = 5_000_000
+COUNT_FOR_PREMIUM = 3
+PREMIUM_FOR_OPERATIONS = 0.03 #percent
+
 count_transactions = 0
 account = START_SUM
 
 
 def deposit_money(acc, count):
-    amount = int(input('Введите сумму, кратную 50, которую хотите внести: '))
-    if amount % 50 == 0 and amount > 0:
+    amount = int(input(f'Введите сумму, кратную {MULTIPLE_SUM}, которую хотите внести: '))
+    if amount % {MULTIPLE_SUM} == 0 and amount > 0:
         acc += amount
-        if amount * 0.15 < 30:
-            acc -= 30
-            print('комиссия за операцию 30')
-        elif 30 <= amount * 0.15 <= 600:
-            acc -= acc * 0.15
-            print(f'комиссия за операцию 1.5%: {amount * 0.15}')
-        else:
-            acc -= 600
-            print('комиссия за операцию 600')
         count += 1
     else:
-        print('Некорректный ввод. Сумма должна быть кратна 50 и быть больше 0.')
-    if count % 3 == 0:
-        acc += acc * 0.03
+        print(f'Некорректный ввод. Сумма должна быть кратна {MULTIPLE_SUM} и быть больше 0.')
+    if count % COUNT_FOR_PREMIUM == 0:
+        acc += acc * PREMIUM_FOR_OPERATIONS
     return acc
 
 
 def withdraw_money(acc, count):
-    amount = int(input('Введите сумму, кратную 50, которую хотите снять: '))
+    amount = int(input(f'Введите сумму, кратную {MULTIPLE_SUM}, которую хотите снять: '))
     if amount > acc:
         print('Нельзя снять больше, чем есть на счете')
     else:
-        if amount % 50 == 0 and amount > 0:
+        if amount % MULTIPLE_SUM == 0 and amount > 0:
             acc -= amount
-            if amount * 0.15 < 30:
-                acc -= 30
-                print('комиссия за операцию 30')
-            elif 30 <= amount * 0.15 <= 600:
-                acc -= acc * 0.15
-                print(f'комиссия за операцию 1.5%: {amount * 0.15}')
+            if amount * COMMISSION < MINIMUM_COMMISSION:
+                acc -= MINIMUM_COMMISSION
+                print(f'комиссия за операцию {MINIMUM_COMMISSION}')
+            elif MINIMUM_COMMISSION <= amount * COMMISSION <= MAXIMUM_COMMISSION:
+                acc -= acc * COMMISSION
+                print(f'комиссия за операцию {COMMISSION * 100}%: {amount * COMMISSION}')
             else:
-                acc -= 600
-                print('комиссия за операцию 600')
+                acc -= MAXIMUM_COMMISSION
+                print(f'комиссия за операцию {MAXIMUM_COMMISSION}')
             count += 1
         else:
-            print('Некорректный ввод. Сумма должна быть кратна 50 и быть больше 0.')
-    if count % 3 == 0:
-        acc += acc * 0.03
+            print(f'Некорректный ввод. Сумма должна быть кратна {MULTIPLE_SUM} и быть больше 0.')
+    if count % COUNT_FOR_PREMIUM == 0:
+        acc += acc * PREMIUM_FOR_OPERATIONS
     return acc
 
 
@@ -68,9 +68,9 @@ while True:
     2 - снять деньги
     3 - выйти''')
     choice = input('>>> ')
-    if account > 5_000_000:
-        print(f'налог на роскошь - 10% от суммы счета: {account * 0.1}')
-        account = account - account * 0.1
+    if account > LUXURY_SUM:
+        print(f'налог на роскошь - {LUXURY_COMMISSION * 100}% от суммы счета: {account * LUXURY_COMMISSION}')
+        account = account - account * LUXURY_COMMISSION
     match choice:
         case '1':
             account = deposit_money(account, count_transactions)
