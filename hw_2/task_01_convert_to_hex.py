@@ -11,7 +11,7 @@ def convert_number(n: int, base: int) -> str:
     temp = []
     while n:
         temp.append(digits[n % base])
-        n = n // base
+        n //= base
     temp.reverse()
     return ''.join(temp)
 
