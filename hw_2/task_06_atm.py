@@ -10,7 +10,6 @@
 операцией, даже ошибочной
 ✔ Любое действие выводит сумму денег
 """
-
 START_SUM = 0
 MULTIPLE_SUM = 50
 MINIMUM_COMMISSION = 30 #total
