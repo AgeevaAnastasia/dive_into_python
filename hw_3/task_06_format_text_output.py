@@ -9,7 +9,7 @@
 user_text = input("Введите строку текста: ")
 # user_text = "Hi, hi, hi! What an amazing meet!"
 
-text = user_text.split(' ')
+text = user_text.split()
 sort_test_list = sorted(text)
 spaces = len(max(sort_test_list, key=len))
 print(spaces)

@@ -18,8 +18,8 @@ for item in user_text:
     dict_count1[item] = dict_count1.get(item, 0) + 1
 
 dict_count2 = {}
-for item in user_text:
-    dict_count2.setdefault(item, user_text.count(item))
+for item in set(user_text):
+    dict_count2[item] = user_text.count(item))
 
 print(dict_count1)
 print(dict_count2)
