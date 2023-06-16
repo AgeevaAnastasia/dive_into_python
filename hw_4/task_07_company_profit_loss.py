@@ -6,11 +6,7 @@
 
 
 def profit_loss(dict_firm: dict):
-    res = True
-    for value in dict_firm.values():
-        if sum(value) < 0:
-            res = False
-    return res
+    return all(map(lambda value: sum(value) > 0, dict_firm.values()))
 
 
 firm = {'Солнышко': [100000, -20000, 30000, -5000], 'Капелька': [50000, -10000, 5000],

@@ -8,10 +8,10 @@
 def get_dict_params(**kwargs):
     my_dict = {}
     for key, value in kwargs.items():
-        if isinstance(value, list) or isinstance(value, set) or isinstance(value, dict):
-            my_dict[", ".join(map(str, value))] = key
-        else:
+        if value.__hash__:
             my_dict[value] = key
+        else:
+            my_dict[", ".join(map(str, value))] = key
     return my_dict
 
 
