@@ -11,7 +11,7 @@ def get_dict_params(**kwargs):
         if value.__hash__:
             my_dict[value] = key
         else:
-            my_dict[", ".join(map(str, value))] = key
+            my_dict[str(value)] = key
     return my_dict
 
 
