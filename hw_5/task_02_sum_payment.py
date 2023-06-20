@@ -9,7 +9,7 @@ names = ["Иванов", "Петров", "Сидоров"]
 salaries = [20000, 25000, 30000]
 bonus = ['10.25%', '11%', '11.5%']
 
-dict_sum = {str(i[0]): i[1] * float(i[2].strip('%')) / 100 for i in zip(names, salaries, bonus)}
+dict_sum = {i[0]: i[1] * float(i[2][:-1]) / 100 for i in zip(names, salaries, bonus)}
 
 for name, sum_sal in dict_sum.items():
     print(f'{name}: {sum_sal}')

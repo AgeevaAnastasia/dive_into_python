@@ -6,7 +6,7 @@
 
 def path_file(path_file):
     *path, name, extension = path_file.replace('.', "\\").split('\\')
-    return tuple(['\\'.join(path), name, extension])
+    return '\\'.join(path), name, extension
 
 
 # print(path_file(input('Введите абсолютный путь до файла: ')))
