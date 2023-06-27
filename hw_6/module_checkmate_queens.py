@@ -10,7 +10,7 @@ N = 8  # размер доски и количество ферзей
 def checkmate_queens(x):
     global solutions, matrix
     if x < N:
-        for matrix[x] in range(0, N):
+        for matrix[x] in range(N):
             for y in range(x - 1, -1, -1):
                 if matrix[x] == matrix[y] or abs(matrix[x] - matrix[y]) == (x - y):
                     break
@@ -18,7 +18,7 @@ def checkmate_queens(x):
                 checkmate_queens(x + 1)
     elif N > 0:
         solutions += 1
-        for i in range(0, N - 1):
+        for i in range(N - 1):
             print(f'{chr(i + 65)}{matrix[i] + 1}', end=' ') # замена первой цифру на букву
         else:
             print(f'{chr(N + 64)}{matrix[N - 1] + 1}')
