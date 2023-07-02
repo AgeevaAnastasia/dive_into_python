@@ -71,13 +71,13 @@ def quadratic_equation(a, b, c):
     print(d)
     if d < 0:
         return 'no roots'
-    elif d == 0:
+    if d == 0:
         x = -b / (2 * a)
         return f'{x = }'
-    else:
-        x1 = (-b + d ** 0.5) / (2 * a)
-        x2 = (-b - d ** 0.5) / (2 * a)
-        return f'{x1 = }, {x2 = }'
+
+    x1 = (-b + d ** 0.5) / (2 * a)
+    x2 = (-b - d ** 0.5) / (2 * a)
+    return f'{x1 = }, {x2 = }'
 
 
 if __name__ == '__main__':
