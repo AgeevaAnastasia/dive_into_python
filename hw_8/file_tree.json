@@ -1,0 +1,98 @@
+[
+ {
+  "name": "dir1",
+  "parent directory": ".",
+  "type": "directory",
+  "size": 2376099
+ },
+ {
+  "name": "file.csv",
+  "parent directory": ".",
+  "type": "file",
+  "size": 70
+ },
+ {
+  "name": "file.pickle",
+  "parent directory": ".",
+  "type": "file",
+  "size": 158
+ },
+ {
+  "name": "file_tree.csv",
+  "parent directory": ".",
+  "type": "file",
+  "size": 521
+ },
+ {
+  "name": "file_tree.json",
+  "parent directory": ".",
+  "type": "file",
+  "size": 1659
+ },
+ {
+  "name": "file_tree.pickle",
+  "parent directory": ".",
+  "type": "file",
+  "size": 659
+ },
+ {
+  "name": "task_01_dir_walk.py",
+  "parent directory": ".",
+  "type": "file",
+  "size": 2085
+ },
+ {
+  "name": "task_06_pickle_to_csv_tab.py",
+  "parent directory": ".",
+  "type": "file",
+  "size": 1228
+ },
+ {
+  "name": "task_07_read_from_csv_tab_to_pickle_str.py",
+  "parent directory": ".",
+  "type": "file",
+  "size": 559
+ },
+ {
+  "name": "dir2_1",
+  "parent directory": "dir1",
+  "type": "directory",
+  "size": 136545
+ },
+ {
+  "name": "dir2_2",
+  "parent directory": "dir1",
+  "type": "directory",
+  "size": 0
+ },
+ {
+  "name": "file2_1.txt",
+  "parent directory": "dir1",
+  "type": "file",
+  "size": 12
+ },
+ {
+  "name": "file2_2.bmp",
+  "parent directory": "dir1",
+  "type": "file",
+  "size": 2239542
+ },
+ {
+  "name": "dir3_1",
+  "parent directory": "dir2_1",
+  "type": "directory",
+  "size": 136014
+ },
+ {
+  "name": "file3_1.txt",
+  "parent directory": "dir2_1",
+  "type": "file",
+  "size": 531
+ },
+ {
+  "name": "file4_1.bmp",
+  "parent directory": "dir3_1",
+  "type": "file",
+  "size": 136014
+ }
+]

@@ -1,0 +1,17 @@
+name,parent directory,type,size
+dir1,.,directory,2376099
+file.csv,.,file,70
+file.pickle,.,file,158
+file_tree.csv,.,file,521
+file_tree.json,.,file,1659
+file_tree.pickle,.,file,659
+task_01_dir_walk.py,.,file,2085
+task_06_pickle_to_csv_tab.py,.,file,1228
+task_07_read_from_csv_tab_to_pickle_str.py,.,file,559
+dir2_1,dir1,directory,136545
+dir2_2,dir1,directory,0
+file2_1.txt,dir1,file,12
+file2_2.bmp,dir1,file,2239542
+dir3_1,dir2_1,directory,136014
+file3_1.txt,dir2_1,file,531
+file4_1.bmp,dir3_1,file,136014
