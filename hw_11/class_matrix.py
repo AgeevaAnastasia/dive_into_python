@@ -70,6 +70,8 @@ class Matrix:
 
     def __add__(self, other):
         """Сложение двух матриц"""
+        if not len(self.matrix) == len(other.matrix) and not len(self.matrix[0]) == len(other.matrix[0]):
+            return 'Матрицы не равны, сложение невозможно'
         return [[self.matrix[i][j] + other.matrix[i][j]
                  for j in range(len(self.matrix[0]))] for i in range(len(self.matrix))]
 
