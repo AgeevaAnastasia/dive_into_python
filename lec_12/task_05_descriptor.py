@@ -50,8 +50,7 @@ print(std1)
 
 
 class Range:
-    def __init__(self, min_value: int = None, max_value: int =
-    None):
+    def __init__(self, min_value: int = None, max_value: int = None):
         self.min_value = min_value
         self.max_value = max_value
 

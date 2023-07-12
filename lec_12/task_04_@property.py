@@ -10,10 +10,9 @@ class User:
     def __init__(self, name):
         self._name = name
 
-
-@property
-def name(self):
-    return self._name
+    @property
+    def name(self):
+        return self._name
 
 
 user = User('Стивен')
@@ -41,10 +40,9 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
 
-
-@property
-def full_name(self):
-    return f'{self.first_name} {self.last_name}'
+    @property
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'
 
 
 user = User('Стивен', 'Спилберг')
@@ -73,25 +71,20 @@ class User:
         self.last_name = last_name
         self._age = 0
 
+    @property
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'
 
-@property
-def full_name(self):
-    return f'{self.first_name} {self.last_name}'
+    @property
+    def age(self):
+        return self._age
 
-
-property
-
-
-def age(self):
-    return self._age
-
-
-@age.setter
-def age(self, value):
-    if value > self._age:
-        self._age = value
-    else:
-        raise ValueError(f'Новый возраст должен быть больше текущего: {self._age}')
+    @age.setter
+    def age(self, value):
+        if value > self._age:
+            self._age = value
+        else:
+            raise ValueError(f'Новый возраст должен быть больше текущего: {self._age}')
 
 
 user = User('Стивен', 'Спилберг')
