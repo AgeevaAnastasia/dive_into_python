@@ -11,6 +11,9 @@ class Factory:
         self.animal = class_animal(*args)
         self.args = args
 
+"""А где возврат объекта? 
+Более того, лучше создать объект не в конструкторе, а в другом методе и оттуда его вернуть."""
+
 
 if __name__ == '__main__':
     one = Factory(Mammal, 'зебра', False, 7)
