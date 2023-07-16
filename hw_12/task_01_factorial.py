@@ -33,7 +33,7 @@ class Factorial1:
         key = str(value) + "!"
         self._history.append(key)
         self._storage[key] = factorial(value)
-        return f'{value}! = {factorial(value)}'
+        return f'{value}! = {self._storage[key]}'
 
     def __enter__(self):
         return self
@@ -72,4 +72,4 @@ if __name__ == "__main__":
         print(cf(5))
         print(cf(2))
         print(cf(11))
-        print(cf)
+        print(calk_fact)
