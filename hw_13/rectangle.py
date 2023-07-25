@@ -52,7 +52,7 @@ class Rectangle:
             return 'Прямоугольники равны'
         elif self.perimeter() > other.perimeter():
             p = self.perimeter() - other.perimeter()
-            a = (p // 2) // 2
+            a = p // 2 // 2
             if a == 0:
                 a += 1
             b = (p // 2) - a
