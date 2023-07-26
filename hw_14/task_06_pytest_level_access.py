@@ -5,6 +5,10 @@
 import pytest
 from project_id_level_access import Project, User, AccessException, LevelException
 
+"""Файл как и путь до него может быть отдельной фикстурой, 
+данные который после тестов удаляются. 
+Используйте встроенную фикстуру tmp_path. Подробнее тут
+https://habr.com/ru/companies/tinkoff/articles/745994/"""
 
 @pytest.fixture
 def data():
